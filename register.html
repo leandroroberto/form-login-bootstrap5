@@ -9,12 +9,13 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <!-- CSS do projeto -->
     <link rel="stylesheet" href="css/styles.css">
+    
     <title>Registro</title>
 </head>
 <body>
     <div class="container col-11 col-md-9" id="form-container">
         <div class="row gx-5">
-            <div class="col-md-6">
+            <form class="col-md-6">
                 <h2>Realize seu cadastro</h2>
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="mame" name="name" placeholder="Digite o seu nome">
@@ -29,11 +30,11 @@
                     <label for="email" class="form-label">Digite o seu email</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Digite a sua senha">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Digite a sua senha" min="6" max="10">
                     <label for="password" class="form-label">Digite a sua senha</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirme a sua senha">
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirme a sua senha"  min="6" max="10">
                     <label for="password" class="form-label">Confirme a sua senha</label>
                 </div>
                 <div class="form-check mb-2">
@@ -48,8 +49,8 @@
                         Deseja receber as nossas Newletters?
                     </label>
                 </div>
-                <input type="submit" value="Cadastrar" class="btn btn-primary">
-            </div>
+                <button class="btn btn-primary btn-login" id="btn-register" disabled>Cadastrar</button>
+            </form>
             <div class="col-md-6">
                 <div class="row align-items-center">
                     <div class="col-12">
@@ -62,5 +63,6 @@
             </div>
         </div>
     </div>
+    <script src="js/register.js"></script>
 </body>
 </html>
